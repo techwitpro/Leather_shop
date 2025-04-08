@@ -15,14 +15,20 @@
 
 @layer utilities {
   .hero-header {
-    @apply text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-normal tracking-normal russo;
+    @apply text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-[158px] font-normal tracking-normal russo;
   }
   .hero-paragraph {
-    @apply text-white mt-4 poppins font-normal text-sm sm:text-base md:text-lg tracking-normal text-wrap;
+    @apply text-white mt-4 poppins font-normal text-sm sm:text-base md:text-[22px] tracking-normal text-wrap;
   }
 
   .button-primary {
-    @apply w-[220px] h-[60px] gap-[10px] bg-white text-black text-center rounded-none shadow-md mt-12;
+    @apply w-[300px] h-[86px] gap-[10px] bg-white text-black text-[20px] tracking-normal font-normal text-center rounded-none shadow-md mt-12;
+  }
+  .primary-header {
+    @apply leading-[100%] text-black text-xl sm:text-2xl md:text-4xl lg:text-[80px] font-normal tracking-normal russo text-center items-center;
+  }
+  .primary-paragraph {
+    @apply leading-[148%] text-black mt-4 poppins font-normal text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] tracking-normal text-wrap text-center items-center mt-10 mb-20;
   }
 }
 

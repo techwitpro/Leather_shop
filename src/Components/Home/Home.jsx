@@ -1,9 +1,12 @@
 import React from 'react'
 import Hero from './Hero'
+import ProductCategory from './ProductCategory' 
+
 const Home = () => {
   return (
     <div>
       <Hero />
+      <ProductCategory />
       <section className="bg-white p-8">
         <h2 className="text-3xl font-bold mb-4">Featured Products</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
