@@ -8,7 +8,7 @@ const Hero = () => {
       <img
         src={hero} // replace with your image or use {hero}
         alt="Hero"
-        className="absolute inset-0 w-full h-full object-cover z-0 overflow-hidden"
+        className="absolute inset-0 w-full h-full object-cover z-0 overflow-hidden bg-cover bg-center"
       />
 
       {/* Overlay */}
