@@ -24,11 +24,11 @@ const Footer = () => {
 
         {/* Navigation Links - Company */}
         <div className="flex flex-col justify-center items-start">
-          <h3 className="text-lg font-semibold text-white mb-3">Company</h3>
+          <h3 className="text-lg font-semibold text-white mb-3 ">Company</h3>
           <ul className="space-y-2 text-[14px] md:text-[16px] text-white">
-            <li><a href="/home" className="hover:text-gray-300">About</a></li>
-            <li><a href="/shop" className="hover:text-gray-300">Product</a></li>
-            <li><a href="/about" className="hover:text-gray-300">Order</a></li>
+            <li><a href="/home" className="hover:text-gray-300 hover:underline transition-colors duration-200">About</a></li>
+            <li><a href="/shop" className="hover:text-gray-300 hover:underline transition-colors duration-200">Product</a></li>
+            <li><a href="/about" className="hover:text-gray-300 hover:underline transition-colors duration-200">Order</a></li>
           </ul>
         </div>
 
@@ -36,9 +36,9 @@ const Footer = () => {
         <div className="flex flex-col justify-center items-start">
           <h3 className="text-lg font-semibold text-white mb-3">Help</h3>
           <ul className="space-y-2 text-[14px] md:text[16px] text-white">
-            <li><a href="/home" className="hover:text-gray-300">Contact Us</a></li>
-            <li><a href="/shop" className="hover:text-gray-300">Map</a></li>
-            <li><a href="/about" className="hover:text-gray-300">Terms & Condition</a></li>
+            <li><a href="/home" className="hover:text-gray-300 hover:underline transition-colors duration-200">Contact Us</a></li>
+            <li><a href="/shop" className="hover:text-gray-300 hover:underline transition-colors duration-200">Map</a></li>
+            <li><a href="/about" className="hover:text-gray-300 hover:underline transition-colors duration-200">Terms & Condition</a></li>
           </ul>
         </div>
 
@@ -70,13 +70,13 @@ const Footer = () => {
         <div className="flex items-center justify-between gap-6 text-center md:text-left">
           <div className="flex justify-center md:justify-start gap-6 text-2xl">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebook className="hover:text-blue-500 transition-colors duration-200" />
+              <FaFacebook className="hover:text-blue-500 transition-colors duration-200 w-[16px] h-[16px] md:w-full md:h-full" />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <FaInstagram className="hover:text-pink-500 transition-colors duration-200" />
+              <FaInstagram className="hover:text-pink-500 transition-colors duration-200 w-[16px] h-[16px] md:w-full md:h-full" />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-              <FaLinkedin className="hover:text-blue-300 transition-colors duration-200" />
+              <FaLinkedin className="hover:text-blue-300 transition-colors duration-200 w-[16px] h-[16px] md:w-full md:h-full" />
             </a>
           </div>
 
