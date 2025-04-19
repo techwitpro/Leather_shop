@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { captoe, chukkaboot, splittoe, tasselloafer, wholecut, doublemonk, } from "../../assets";
+import { captoe, chukkaboot, splittoe, tasselloafer, wholecut, doublemonk, belt } from "../../assets";
 import { Search } from "lucide-react";
+import { Link } from "react-router-dom";
 
 // Sample data with image URLs
-const items = [
+export const items = [
   {
     id: 1,
     name: "Cap-Toe Oxford",
@@ -76,6 +77,22 @@ const items = [
     image: wholecut,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
+  {
+    id: 10,
+    name: "Hand Bag",
+    price: "$90.00",
+    category: "Bags",
+    image: "https://serebags.com/cdn/shop/files/ME_1.jpg?v=1716555087&width=1445",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
+  },
+  {
+    id: 11,
+    name: "Belt",
+    price: "$50.00",
+    category: "Belts",
+    image: belt,
+    text: "The perfect accessory to complete your outfit",
+  },
 
 ];
 
@@ -138,29 +155,27 @@ const ShopTabsWithSearch = () => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredItems.length > 0 ? (
           filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white rounded-sm overflow-hidden transition "
-            >
-              {/* Fixed-height container */}
-              <div className="w-full h-[400px] md:h-[320px] lg:h-[509px] bg-gray-100 flex items-center justify-center">
-                {/* Centered and smaller image */}
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="max-w-[509px] w-full h-[200px] sm:h-[180px] lg:h-[220px] object-contain"
-                />
-              </div>
-              <div className="p-4 space-y-1">
-                <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-800 leading-5 flex justify-between items-center card-title">
-                    {item.name}
-                  </h3>
-                  <p className="text-black font-semibold text-base">{item.price}</p>
+
+            <Link to={`/product/${item.id}`} key={item.id}>
+              <div className="bg-white rounded-sm overflow-hidden transition cursor-pointer hover:shadow-lg">
+                <div className="w-full h-[400px] md:h-[320px] lg:h-[509px] bg-gray-100 flex items-center justify-center">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="max-w-[509px] w-full h-[200px] sm:h-[180px] lg:h-[220px] object-contain"
+                  />
                 </div>
-                <p className="text-black text-base">{item.text}</p>
+                <div className="p-4">
+                  <div className="flex justify-between items-center">
+                    <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 card-title mt-2">
+                      {item.name}
+                    </h3>
+                    <p className="text-black font-semibold text-base ">{item.price}</p>
+                  </div>
+                  <p className="text-black text-base">{item.text}</p>
+                </div>
               </div>
-            </div>
+            </Link>
           ))
         ) : (
           <p className="col-span-full text-center text-gray-500 archivo text-base">No items found.</p>

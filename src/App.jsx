@@ -1,19 +1,20 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import MainLayout from "./layouts/MainLayout";  // Correct the import path
+import MainLayout from "./layouts/MainLayout";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
 import Shop from "./Components/Shop/Shop";
+import ProductDetail from "./Components/Shop/ProductDetail"; // Add this
 
 function App() {
   return (
     <Routes>
-      {/* MainLayout wraps all routes */}
       <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />  {/* Default route */}
+        <Route index element={<Home />} />
         <Route path="home" element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="shop" element={<Shop />} />
+        <Route path="product/:id" element={<ProductDetail />} /> {/* 🔥 New route */}
       </Route>
     </Routes>
   );

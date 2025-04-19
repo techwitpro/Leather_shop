@@ -25,6 +25,7 @@ import tasselloafer from './tasselloafer.png';
 import wholecut from './wholecut.png';
 import doublemonk from './doublemonk.png';
 import splittoe from './splittoe.png';
+import belt from './belt.png';
 
 export {
   bag,
@@ -54,5 +55,6 @@ export {
   wholecut,
   doublemonk,
   splittoe,
+  belt
 
 };
