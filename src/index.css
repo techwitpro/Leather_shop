@@ -22,7 +22,7 @@
   }
 
   .button-primary {
-    @apply w-[200px] h-[60px] md:w-[250px] md:h-[70px] lg:w-[300px] lg:h-[80px] gap-[10px] bg-white text-black text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] tracking-normal font-bold text-center rounded-none shadow-md mt-4 md:mt-12; 
+    @apply w-[200px] h-[60px] md:w-[250px] md:h-[70px] lg:w-[300px] lg:h-[80px] bg-white text-black text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] tracking-normal font-medium text-center rounded-none shadow-lg mt-4 md:mt-12 hover:bg-black hover:text-white hover:border hover:border-white  transition-all duration-300 ease-in-out poppins focus:bg-black focus:text-white focus:ring-2 focus:ring-offset-1 focus:ring-black focus:outline-none;
   }
   .primary-header {
     @apply leading-[100%] text-black text-[30px] sm:text-[32px] md:text-[48px] lg:text-[80px] font-normal tracking-normal russo text-center items-center;
@@ -31,7 +31,7 @@
     @apply leading-[148%] text-black poppins font-normal text-[16px] md:text-[20px] lg:text-[22px] xl:text-[24px] tracking-normal md:text-wrap text-center items-center mt-4 md:mt-6 mb-12 md:mb-16 lg:mb-20;
   }
   .button-secondary {
-    @apply leading-[148%] w-[160px] h-[45px] md:w-[220px] md:h-[58px] lg:h-[60px] gap-[10px] bg-white text-black text-[14px] md:text-[16px] lg:text-[18px] tracking-normal font-medium text-center rounded-none shadow-md mt-4 mb-12 poppins;
+    @apply leading-[148%] w-[160px] h-[45px] md:w-[220px] md:h-[58px] lg:h-[60px] bg-white text-black text-[14px] md:text-[16px] lg:text-[18px] tracking-normal font-medium text-center rounded-none shadow-md mt-4 mb-12 transition-all duration-300 ease-in-out hover:bg-black hover:text-white hover:border hover:border-white focus:bg-black focus:text-white focus:ring-2 focus:ring-offset-1 focus:ring-black focus:outline-none poppins;
   }
   .card-title {
     @apply leading-[100%] text-[20px] sm:text-[22px] md:text-[24px] lg:text-[26px] xl:text-[28px] font-normal tracking-normal russo mb-2;
@@ -42,8 +42,10 @@
   .button-accent {
     @apply leading-[148%] w-[160px] h-[45px] md:w-[220px] md:h-[58px] 
       gap-[10px] bg-black text-white text-[14px] md:text-[16px] lg:text-[18px]
-      tracking-normal font-medium text-center rounded-none shadow-md 
-      mt-4 mb-12 mx-auto block poppins;
+      tracking-normal font-medium text-center rounded-none shadow-lg mt-4 mb-12 mx-auto block poppins hover:bg-white hover:text-black hover:border hover:border-black  transition-all duration-300 ease-in-out poppins focus:bg-black focus:text-white focus:ring-2 focus:ring-offset-1 focus:ring-black focus:outline-none;
+  }
+  .shop-button {
+    @apply leading-[148%] w-[100px] h-[35px] md:w-[220px] md:h-[58px] lg:h-[60px] lg:w-[150px] bg-white text-black text-[14px] md:text-[16px] lg:text-[18px] tracking-normal font-medium text-center rounded-none shadow-md mt-4 mb-12 transition-all duration-300 ease-in-out hover:bg-black hover:text-white hover:border hover:border-white focus:bg-black focus:text-white focus:ring-2 focus:ring-offset-1 focus:ring-black focus:outline-none poppins;
   }
 }
 

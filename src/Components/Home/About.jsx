@@ -3,7 +3,7 @@ import { about } from '../../assets'
 
 const About = () => {
     return (
-        <div>
+        <div className='w-full'>
             <h1 className='primary-header mt-20'>About Our Company</h1>
             <p className='primary-paragraph'>Know About Us</p>
             <section className="relative w-full h-screen bg-black">

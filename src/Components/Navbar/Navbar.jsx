@@ -78,7 +78,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="relative container mx-auto p-4"> {/* Increased padding slightly */}
+    <nav className="relative container px-4 "> {/* Increased padding slightly */}
       <div className="flex items-center justify-between">
 
         {/* --- Left Side --- */}
@@ -187,6 +187,8 @@ const Navbar = () => {
               <button aria-label="User Account" onClick={handleMobileLinkClick} className="text-gray-700 hover:text-black">
                 <img src={user} alt="user" className="h-6 w-6" />
               </button>
+              
+              
             </div>
           </div>
         </div>

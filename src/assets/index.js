@@ -16,6 +16,16 @@ import lastAdded3 from './lastAdded3.png';
 import lastAdded4 from './lastAdded4.png'; 
 import about from './about.png'; 
 import logo2 from './logo2.png'; 
+import shopheroimg from './shopheroimg.png';
+import captoe from './captoe.png';
+import pennyloafer from './pennyloafer.png';
+import chukkaboot from './chukkaboot.png';
+import chealseboot from './chealseboot.png';
+import tasselloafer from './tasselloafer.png'; 
+import wholecut from './wholecut.png';
+import doublemonk from './doublemonk.png';
+import splittoe from './splittoe.png';
+
 export {
   bag,
   brogue,
@@ -34,5 +44,15 @@ export {
   lastAdded3,
   lastAdded4,
   about,
-  logo2
+  logo2,
+  shopheroimg,
+  captoe,
+  pennyloafer,
+  chukkaboot,
+  tasselloafer,
+  chealseboot,
+  wholecut,
+  doublemonk,
+  splittoe,
+
 };

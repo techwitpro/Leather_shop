@@ -3,7 +3,7 @@ import { hero } from '../../assets/index.js';
 
 const Hero = () => {
   return (
-<section className="relative w-full h-screen bg-black">
+<section className="relative w-full h-[600px] md:h-[800px] bg-black ">
       {/* Background Image */}
       <img
         src={hero} // replace with your image or use {hero}
