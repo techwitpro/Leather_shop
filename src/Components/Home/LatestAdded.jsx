@@ -9,7 +9,7 @@ const LatestAdded = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-2 px-2 md:px-0">
                 {/* Card 1 */}
-                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative">
+                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative w-full h-[300px] sm:h-[450px] xl:h-[650px]">
                     <div className="image-container relative z-0">
                         <img
                             src={lastAdded1}
@@ -27,7 +27,7 @@ const LatestAdded = () => {
                 </div>
 
                 {/* Card 2 */}
-                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative">
+                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative w-full h-[300px] sm:h-[450px] xl:h-[650px]"> 
                     <div className="image-container relative z-0">
                         <img
                             src={lastAdded2}
@@ -44,7 +44,7 @@ const LatestAdded = () => {
                 </div>
 
                 {/* Card 3 */}
-                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative">
+                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative w-full h-[300px] sm:h-[450px] xl:h-[650px]">
                     <div className="image-container relative z-0">
                         <img
                             src={lastAdded3}
@@ -62,7 +62,7 @@ const LatestAdded = () => {
                 </div>
 
                 {/* Card 4 */}
-                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative">
+                <div className="bg-white rounded-none shadow-lg overflow-hidden aspect-video relative w-full h-[300px]  sm:h-[450px] xl:h-[650px]">
                     <div className="image-container relative z-0">
                         <img
                             src={lastAdded4}

@@ -18,7 +18,7 @@ const items = [
     price: "$32.00",
     category: "Shoes",
     image: splittoe,
-    text: "Elegant and comfortable loafers for any occasion",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const items = [
     price: "$25.00",
     category: "Belts",
     image: chukkaboot,
-    text: "Stylish chukka boots for a casual look",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
   {
     id: 4,
@@ -34,7 +34,7 @@ const items = [
     price: "$65.00",
     category: "Bags",
     image: tasselloafer,
-    text: "Classic tassel loafers for a sophisticated style",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
   {
     id: 5,
@@ -42,7 +42,7 @@ const items = [
     price: "$30.00",
     category: "Bags",
     image: wholecut,
-    text: "Spacious and durable bags for daily use",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
   {
     id: 6,
@@ -50,7 +50,7 @@ const items = [
     price: "$18.00",
     category: "Belts",
     image: doublemonk,
-    text: "Stylish double monk shoes for a modern look",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
   {
     id: 7,
@@ -58,7 +58,7 @@ const items = [
     price: "$45.00",
     category: "Shoes",
     image: captoe,
-    text: "Stylish brogue shoes for a classic look",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
   {
     id: 8,
@@ -66,7 +66,7 @@ const items = [
     price: "$55.00",
     category: "Shoes",
     image: chukkaboot,
-    text: "Comfortable derby shoes for everyday wear",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
   {
     id: 9,
@@ -74,7 +74,7 @@ const items = [
     price: "$70.00",
     category: "Shoes",
     image: wholecut,
-    text: "Elegant chelsea boots for a polished appearance",
+    text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
 
 ];
@@ -98,14 +98,14 @@ const ShopTabsWithSearch = () => {
   return (
     <div className="mx-auto container px-4 py-10">
       {/* Tabs + Search */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+      <div className="flex flex-col md:flex-row sm:items-center sm:justify-between gap-4 mb-8">
         {/* Tabs */}
         <div className="flex flex-wrap gap-2">
           {categories.map((category) => (
             <button
               key={category}
               onClick={() => setActiveCategory(category)}
-              className={`border border-black px-4 py-2 md:w-[150px] md:h-[50px] transition-colors duration-200 text-base font-medium poppins
+              className={`border border-black px-4 py-2 md:w-[140px] md:h-[45px] transition-colors duration-200 text-base font-medium poppins
     ${activeCategory === category
                   ? "bg-black text-white"
                   : "bg-white text-black hover:bg-black hover:text-white"
@@ -126,9 +126,9 @@ const ShopTabsWithSearch = () => {
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full px-4 py-2 pr-10 border border-black rounded-none
                  text-black placeholder-black focus:ring-1 focus:ring-black focus:outline-none
-                 md:w-full md:h-[50px] text-base poppins"
+                 md:w-full md:h-[45px] text-base archivo"
             />
-            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black w-5 h-5 pointer-events-none" />
+            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black w-5 h-5 pointer-events-none mr-2" />
           </div>
         </div>
 
@@ -140,30 +140,30 @@ const ShopTabsWithSearch = () => {
           filteredItems.map((item) => (
             <div
               key={item.id}
-              className="bg-white rounded-sm overflow-hidden transition border"
+              className="bg-white rounded-sm overflow-hidden transition "
             >
               {/* Fixed-height container */}
-              <div className="w-full h-[400px] md:h-[632px] bg-gray-100 flex items-center justify-center">
+              <div className="w-full h-[400px] md:h-[320px] lg:h-[509px] bg-gray-100 flex items-center justify-center">
                 {/* Centered and smaller image */}
                 <img
                   src={item.image}
                   alt={item.name}
-                  className="max-w-[509px] w-full h-auto object-contain"
+                  className="max-w-[509px] w-full h-[200px] sm:h-[180px] lg:h-[220px] object-contain"
                 />
               </div>
               <div className="p-4 space-y-1">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold text-gray-800 flex justify-between items-center card-title">
+                  <h3 className="text-lg font-semibold text-gray-800 leading-5 flex justify-between items-center card-title">
                     {item.name}
                   </h3>
-                  <p className="text-black font-semibold">{item.price}</p>
+                  <p className="text-black font-semibold text-base">{item.price}</p>
                 </div>
-                <p className="text-black">{item.text}</p>
+                <p className="text-black text-base">{item.text}</p>
               </div>
             </div>
           ))
         ) : (
-          <p className="col-span-full text-center text-gray-500">No items found.</p>
+          <p className="col-span-full text-center text-gray-500 archivo text-base">No items found.</p>
         )}
       </div>
 

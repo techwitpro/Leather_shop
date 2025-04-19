@@ -19,7 +19,7 @@ const ShopHero = () => {
       {/* Content */}
       <div className="relative z-10 max-w-lg sm:max-w-2xl">
         <h1 className="text-white text-3xl sm:text-4xl md:text-6xl lg:text-[80px] leading-tight lg:leading-[1.2] font-normal tracking-wide text-center russo">
-          Shop
+          SHOP
         </h1>
         <p className="hero-paragraph">
           Lets explore our leather products<br />
