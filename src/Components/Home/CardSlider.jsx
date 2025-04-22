@@ -25,7 +25,7 @@ const CardSlider = () => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-50% h-[150px] object-cover mx-auto mt-10"
+              className="w-50% h-[150px] object-cover mx-auto mt-10 transition-transform duration-300 ease-in-out hover:scale-110"
             />
             <div className="p-6">
               <h2 className="card-title text-center text-black">{product.title}</h2>

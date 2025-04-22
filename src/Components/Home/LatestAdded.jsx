@@ -14,7 +14,7 @@ const LatestAdded = () => {
                         <img
                             src={lastAdded1}
                             alt="Nature"
-                            className="w-full h-full object-cover bg-gradient-to-t from-black to-transparent"
+                            className="w-full h-full object-cover bg-gradient-to-t from-black to-transparent transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.08]"
                         />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center">
@@ -32,7 +32,8 @@ const LatestAdded = () => {
                         <img
                             src={lastAdded2}
                             alt="Nature"
-                            className="w-full h-full object-cover bg-gradient-to-t from-black to-transparent"
+                            className="w-full h-full object-cover bg-gradient-to-t from-black to-transparent transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.08]
+"
                         />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center">
@@ -49,7 +50,8 @@ const LatestAdded = () => {
                         <img
                             src={lastAdded3}
                             alt="Nature"
-                            className="w-full h-full object-cove bg-gradient-to-t from-black to-transparent"
+                            className="w-full h-full object-cove bg-gradient-to-t from-black to-transparent transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.08]
+"
                         />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center">
@@ -67,7 +69,8 @@ const LatestAdded = () => {
                         <img
                             src={lastAdded4}
                             alt="Nature"
-                            className="w-full h-full object-cover bg-gradient-to-t from-black to-transparent"
+                            className="w-full h-full object-cover bg-gradient-to-t from-black to-transparent transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] hover:scale-[1.08]
+"
                         />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4 z-10 text-center">

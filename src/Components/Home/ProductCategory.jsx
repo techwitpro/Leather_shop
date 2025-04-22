@@ -29,7 +29,7 @@ const ProductCategory = () => {
         </div>
 
         {/* Card Component Example */}
-        <div className="w-full h-[400px] lg:w-full lg:w-full lg:h-[752px] bg-gray-200 rounded-none overflow-hidden">
+        <div className="w-full h-[400px] lg:w-full lg:h-[752px] bg-gray-200 rounded-none overflow-hidden">
           <div className="relative w-full h-full">
             <img
               src={productCategory2}

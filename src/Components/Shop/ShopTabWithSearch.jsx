@@ -3,6 +3,7 @@ import { captoe, chukkaboot, splittoe, tasselloafer, wholecut, doublemonk, belt 
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
+
 // Sample data with image URLs
 export const items = [
   {
@@ -10,6 +11,11 @@ export const items = [
     name: "Cap-Toe Oxford",
     price: "$53.00",
     category: "Shoes",
+    images: [
+      { src: captoe, bg: '#f3f4f6' },
+      { src: captoe, bg: '#FFFCF1' },
+      { src: captoe, bg: '#000000' },
+    ],
     image: captoe,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -18,6 +24,11 @@ export const items = [
     name: "Split Toe Derby",
     price: "$32.00",
     category: "Shoes",
+    images: [
+      { src: splittoe, bg: '#f3f4f6' },
+      { src: splittoe, bg: '#FFFCF1' },
+      { src: splittoe, bg: '#000000' },
+    ],
     image: splittoe,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -26,6 +37,11 @@ export const items = [
     name: "Chukka Boot",
     price: "$25.00",
     category: "Belts",
+    images: [
+      { src: chukkaboot, bg: '#f3f4f6' },
+      { src: chukkaboot, bg: '#FFFCF1' },
+      { src: chukkaboot, bg: '#000000' },
+    ],
     image: chukkaboot,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -34,6 +50,11 @@ export const items = [
     name: "Tassel Loafer",
     price: "$65.00",
     category: "Bags",
+    images: [
+      { src: tasselloafer, bg: '#f3f4f6' },
+      { src: tasselloafer, bg: '#FFFCF1' },
+      { src: tasselloafer, bg: '#000000' },
+    ],
     image: tasselloafer,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -42,6 +63,11 @@ export const items = [
     name: "Wholecut Oxford",
     price: "$30.00",
     category: "Bags",
+    images: [
+      { src: wholecut, bg: '#f3f4f6' },
+      { src: wholecut, bg: '#FFFCF1' },
+      { src: wholecut, bg: '#000000' },
+    ],
     image: wholecut,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -50,6 +76,11 @@ export const items = [
     name: "Double Monk",
     price: "$18.00",
     category: "Belts",
+    images: [
+      { src: doublemonk, bg: '#f3f4f6' },
+      { src: doublemonk, bg: '#FFFCF1' },
+      { src: doublemonk, bg: '#000000' },
+    ],
     image: doublemonk,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -58,6 +89,11 @@ export const items = [
     name: "Chealsea Boot",
     price: "$45.00",
     category: "Shoes",
+    images: [
+      { src: captoe, bg: '#f3f4f6' },
+      { src: captoe, bg: '#FFFCF1' },
+      { src: captoe, bg: '#000000' },
+    ],
     image: captoe,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -66,6 +102,11 @@ export const items = [
     name: "Brogue Derby",
     price: "$55.00",
     category: "Shoes",
+    images: [
+      { src: chukkaboot, bg: '#f3f4f6' },
+      { src: chukkaboot, bg: '#FFFCF1' },
+      { src: chukkaboot, bg: '#000000' },
+    ],
     image: chukkaboot,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -74,6 +115,12 @@ export const items = [
     name: "Plain-Toe Blucher",
     price: "$70.00",
     category: "Shoes",
+    images: [
+      { src: wholecut, bg: '#f3f4f6' },
+      { src: wholecut, bg: '#FFFCF1' },
+      { src: belt, bg: '#000000' },
+      
+    ],
     image: wholecut,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
   },
@@ -82,14 +129,24 @@ export const items = [
     name: "Hand Bag",
     price: "$90.00",
     category: "Bags",
-    image: "https://serebags.com/cdn/shop/files/ME_1.jpg?v=1716555087&width=1445",
-    text: "Give your feet the beauty treatment that only brand new shoes can give",
+    images: [
+      { src:  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsCBW4QmNdnwSnulilCh0XMdF5oKQfhkaAu3UvndsOUJfCXyZdnr7UFTQz_UWklowx7g&usqp=CAU", bg: '#f3f4f6'},
+      { src:  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsCBW4QmNdnwSnulilCh0XMdF5oKQfhkaAu3UvndsOUJfCXyZdnr7UFTQz_UWklowx7g&usqp=CAU", bg: '#FFFCF1' },
+      { src:  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsCBW4QmNdnwSnulilCh0XMdF5oKQfhkaAu3UvndsOUJfCXyZdnr7UFTQz_UWklowx7g&usqp=CAU", bg: '#000000' },
+    ],
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsCBW4QmNdnwSnulilCh0XMdF5oKQfhkaAu3UvndsOUJfCXyZdnr7UFTQz_UWklowx7g&usqp=CAU",
+    text: "The perfect accessory to complete your outfit",
   },
   {
     id: 11,
     name: "Belt",
     price: "$50.00",
     category: "Belts",
+    images: [
+      { src: belt, bg: '#f3f4f6' },
+      { src: belt, bg: '#FFFCF1' },
+      { src: belt, bg: '#000000' },
+    ],
     image: belt,
     text: "The perfect accessory to complete your outfit",
   },
@@ -100,6 +157,7 @@ export const items = [
 const categories = ["All Items", ...new Set(items.map((item) => item.category))];
 
 const ShopTabsWithSearch = () => {
+  const [visibleCount, setVisibleCount] = useState(9); // ✅ Correct position
   const [activeCategory, setActiveCategory] = useState("All Items");
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -121,7 +179,11 @@ const ShopTabsWithSearch = () => {
           {categories.map((category) => (
             <button
               key={category}
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category)
+                setVisibleCount(6)
+              }}
+              
               className={`border border-black px-4 py-2 md:w-[140px] md:h-[45px] transition-colors duration-200 text-base font-medium poppins
     ${activeCategory === category
                   ? "bg-black text-white"
@@ -140,7 +202,11 @@ const ShopTabsWithSearch = () => {
               type="text"
               placeholder="Search products..."
               value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
+              onChange={(e) => {
+                setSearchTerm(e.target.value)
+                setVisibleCount(6);
+
+              }}
               className="w-full px-4 py-2 pr-10 border border-black rounded-none
                  text-black placeholder-black focus:ring-1 focus:ring-black focus:outline-none
                  md:w-full md:h-[45px] text-base archivo"
@@ -154,7 +220,7 @@ const ShopTabsWithSearch = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {filteredItems.length > 0 ? (
-          filteredItems.map((item) => (
+          filteredItems.slice(0, visibleCount).map((item) => (
 
             <Link to={`/product/${item.id}`} key={item.id}>
               <div className="bg-white rounded-sm overflow-hidden transition cursor-pointer hover:shadow-lg">
@@ -162,7 +228,7 @@ const ShopTabsWithSearch = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="max-w-[509px] w-full h-[200px] sm:h-[180px] lg:h-[220px] object-contain"
+                    className="max-w-[509px] w-full h-[200px] sm:h-[180px] lg:h-[220px] object-contain transition-transform duration-300 ease-in-out hover:scale-110"
                   />
                 </div>
                 <div className="p-4">
@@ -181,6 +247,18 @@ const ShopTabsWithSearch = () => {
           <p className="col-span-full text-center text-gray-500 archivo text-base">No items found.</p>
         )}
       </div>
+
+      {visibleCount < filteredItems.length && (
+        <div className="flex justify-center mt-8">
+          <button
+            onClick={() => setVisibleCount((prev) => prev + 3)} // show 3 more per click
+            className="border border-black px-4 p-2 w-[180px] h-[50px] md:w-[200px] md:h-[60px] transition-colors duration-200 text-base font-medium poppins hover:bg-black hover:text-white  bg-white text-black  focus:bg-black focus:text-white focus:ring-2 focus:ring-offset-1 focus:ring-black focus:outline-none"
+          >
+            Show More
+          </button>
+        </div>
+      )}
+
 
 
 

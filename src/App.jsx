@@ -4,7 +4,7 @@ import MainLayout from "./layouts/MainLayout";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
 import Shop from "./Components/Shop/Shop";
-import ProductDetail from "./Components/Shop/ProductDetail"; // Add this
+import ProductDetail from "./Components/Shop/ProductDetail"; 
 
 function App() {
   return (
