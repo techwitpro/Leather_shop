@@ -26,6 +26,8 @@ import wholecut from './wholecut.png';
 import doublemonk from './doublemonk.png';
 import splittoe from './splittoe.png';
 import belt from './belt.png';
+import plane from './plane.png';
+import secure from './secure.png';
 
 export {
   bag,
@@ -55,6 +57,8 @@ export {
   wholecut,
   doublemonk,
   splittoe,
-  belt
+  belt,
+  plane,
+  secure,
 
 };

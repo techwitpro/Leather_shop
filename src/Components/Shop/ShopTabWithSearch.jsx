@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { captoe, chukkaboot, splittoe, tasselloafer, wholecut, doublemonk, belt } from "../../assets";
+import { captoe, chukkaboot, splittoe, tasselloafer, wholecut, doublemonk, belt} from "../../assets";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,8 @@ export const items = [
   {
     id: 1,
     name: "Cap-Toe Oxford",
-    price: "$53.00",
+    price: 53.00,
+    discountPrice: "$60.00",
     category: "Shoes",
     images: [
       { src: captoe, bg: '#f3f4f6' },
@@ -18,11 +19,16 @@ export const items = [
     ],
     image: captoe,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★☆",
+    reviews: "6 customer review",
+    availability: "In Stock",
   },
   {
     id: 2,
     name: "Split Toe Derby",
-    price: "$32.00",
+    price: 32.00,
+    discountPrice: "$40.00",
     category: "Shoes",
     images: [
       { src: splittoe, bg: '#f3f4f6' },
@@ -31,11 +37,16 @@ export const items = [
     ],
     image: splittoe,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★★",
+    reviews: "8 customer review",
+    availability: "In Stock",
   },
   {
     id: 3,
     name: "Chukka Boot",
-    price: "$25.00",
+    price: 25.00,
+    discountPrice: "$30.00",
     category: "Belts",
     images: [
       { src: chukkaboot, bg: '#f3f4f6' },
@@ -44,11 +55,16 @@ export const items = [
     ],
     image: chukkaboot,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★★",
+    reviews: "10 customer review",
+    availability: "In Stock",
   },
   {
     id: 4,
     name: "Tassel Loafer",
-    price: "$65.00",
+    discountPrice: "$70.00",
+    price: 65.00,
     category: "Bags",
     images: [
       { src: tasselloafer, bg: '#f3f4f6' },
@@ -57,11 +73,16 @@ export const items = [
     ],
     image: tasselloafer,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★",
+    reviews: "4 customer review",
+    availability: "Out Of Stock",
   },
   {
     id: 5,
     name: "Wholecut Oxford",
-    price: "$30.00",
+    discountPrice: "$35.00",
+    price: 30.00,
     category: "Bags",
     images: [
       { src: wholecut, bg: '#f3f4f6' },
@@ -70,11 +91,16 @@ export const items = [
     ],
     image: wholecut,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★☆",
+    reviews: "5 customer review", 
+    availability: "In Stock",
   },
   {
     id: 6,
     name: "Double Monk",
-    price: "$18.00",
+    discountPrice: "$20.00",
+    price: 18.00,
     category: "Belts",
     images: [
       { src: doublemonk, bg: '#f3f4f6' },
@@ -83,11 +109,16 @@ export const items = [
     ],
     image: doublemonk,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★★",
+    reviews: "12 customer review",
+    availability: "In Stock",
   },
   {
     id: 7,
     name: "Chealsea Boot",
-    price: "$45.00",
+    discountPrice: "$50.00",
+    price: 45.00,
     category: "Shoes",
     images: [
       { src: captoe, bg: '#f3f4f6' },
@@ -96,11 +127,16 @@ export const items = [
     ],
     image: captoe,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★★",
+    reviews: "6 customer review",
+    availability: "In Stock",
   },
   {
     id: 8,
     name: "Brogue Derby",
-    price: "$55.00",
+    price: 55.00,
+    discountPrice: "$60.00",
     category: "Shoes",
     images: [
       { src: chukkaboot, bg: '#f3f4f6' },
@@ -109,25 +145,35 @@ export const items = [
     ],
     image: chukkaboot,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★★",
+    reviews: "10 customer review",
+    availability: "In Stock",
   },
   {
     id: 9,
     name: "Plain-Toe Blucher",
-    price: "$70.00",
+    discountPrice: "$80.00",
+    price: 70.00,
     category: "Shoes",
     images: [
       { src: wholecut, bg: '#f3f4f6' },
       { src: wholecut, bg: '#FFFCF1' },
-      { src: belt, bg: '#000000' },
+      { src: wholecut, bg: '#000000' },
       
     ],
     image: wholecut,
     text: "Give your feet the beauty treatment that only brand new shoes can give",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★",
+    reviews: "7 customer review",
+    availability: "In Stock",
   },
   {
     id: 10,
     name: "Hand Bag",
-    price: "$90.00",
+    discountPrice: "$100.00",
+    price: 90.00,
     category: "Bags",
     images: [
       { src:  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsCBW4QmNdnwSnulilCh0XMdF5oKQfhkaAu3UvndsOUJfCXyZdnr7UFTQz_UWklowx7g&usqp=CAU", bg: '#f3f4f6'},
@@ -136,11 +182,16 @@ export const items = [
     ],
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNsCBW4QmNdnwSnulilCh0XMdF5oKQfhkaAu3UvndsOUJfCXyZdnr7UFTQz_UWklowx7g&usqp=CAU",
     text: "The perfect accessory to complete your outfit",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★★",
+    reviews: "8 customer review",
+    availability: "Out Of Stock",
   },
   {
     id: 11,
     name: "Belt",
-    price: "$50.00",
+    price: 50.00,
+    discountPrice: "$60.00",
     category: "Belts",
     images: [
       { src: belt, bg: '#f3f4f6' },
@@ -149,6 +200,11 @@ export const items = [
     ],
     image: belt,
     text: "The perfect accessory to complete your outfit",
+    productDetails: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    star: "★★★★☆",
+    reviews: "9 customer review",
+    availability: "In Stock",
+    
   },
 
 ];
@@ -236,7 +292,7 @@ const ShopTabsWithSearch = () => {
                     <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-gray-800 card-title mt-2">
                       {item.name}
                     </h3>
-                    <p className="text-black font-semibold text-base ">{item.price}</p>
+                    <p className="text-black font-semibold text-base ">${item.price}</p>
                   </div>
                   <p className="text-black text-base">{item.text}</p>
                 </div>

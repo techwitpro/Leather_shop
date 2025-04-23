@@ -116,9 +116,11 @@ const Navbar = () => {
             <button aria-label="Search" className="text-gray-700 hover:text-black">
               <img src={search} alt="search" className="h-6 w-6" /> {/* Consistent size */}
             </button>
-            <button aria-label="Shopping Bag" className="text-gray-700 hover:text-black">
-              <img src={bag} alt="shopping bag" className="h-6 w-6" /> {/* Consistent size */}
-            </button>
+            <Link to="/cart" aria-label="Shopping Bag" className="text-gray-700 hover:text-black">
+              <button>
+                <img src={bag} alt="shopping bag" className="h-6 w-6" /> {/* Consistent size */}
+              </button>
+            </Link>
             <button aria-label="User Account" className="text-gray-700 hover:text-black">
               <img src={user} alt="user" className="h-6 w-6" /> {/* Consistent size */}
             </button>
@@ -187,8 +189,8 @@ const Navbar = () => {
               <button aria-label="User Account" onClick={handleMobileLinkClick} className="text-gray-700 hover:text-black">
                 <img src={user} alt="user" className="h-6 w-6" />
               </button>
-              
-              
+
+
             </div>
           </div>
         </div>
