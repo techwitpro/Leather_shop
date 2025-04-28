@@ -1,19 +1,11 @@
 import React from 'react';
 import { monk, brogue, oxford, derby } from '../../assets';
-import { useCart } from "../context/CartContext";
 
 
 
 const CardSlider = () => {
 
-    const { addToCart } = useCart();
-    const handleAddToCart = () => {
-      addToCart(product, quantity);
-      alert("Product added to cart");
-      console.log(product)
-      setQuantity(1);
-    }
-  const products = [
+    const products = [
     { id: 1, title: 'Classic Oxford', price: '$99.99', image: monk },
     { id: 2, title: 'Wingtip Brogue', price: '$149.99', image: brogue },
     { id: 3, title: 'Derby Lace-Up', price: '$199.99', image: oxford },

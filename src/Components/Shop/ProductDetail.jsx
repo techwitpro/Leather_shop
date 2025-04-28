@@ -4,7 +4,7 @@ import { items } from "./ShopTabWithSearch";
 import { secure, plane } from "../../assets";
 import { useCart } from "../context/CartContext";
 import SpecificationTab from "./SpecificationTab";
-import CardSlider from "../Home/CardSlider";
+import SimilarProduct from "./SimillarProduct";
 
 const ProductDetail = () => {
   const { addToCart } = useCart();
@@ -166,9 +166,8 @@ const ProductDetail = () => {
 
       {/* Tabs */}
       <SpecificationTab />
-      <div className="container mx-auto px-4 mt-8 mb- 8">
-        <CardSlider />
-      </div>
+      <SimilarProduct />
+      
 
 
     </>

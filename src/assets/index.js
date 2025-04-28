@@ -28,6 +28,10 @@ import splittoe from './splittoe.png';
 import belt from './belt.png';
 import plane from './plane.png';
 import secure from './secure.png';
+import aboutFirst from './aboutFirst.png';
+import aboutTwo from './aboutTwo.png';
+import aboutBag from './aboutBag.jpg'
+import aboutMoneybag from './aboutMoneybag.jpg'
 
 export {
   bag,
@@ -60,5 +64,8 @@ export {
   belt,
   plane,
   secure,
-
+  aboutFirst,
+  aboutTwo,
+  aboutBag,
+  aboutMoneybag,
 };

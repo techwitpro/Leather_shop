@@ -72,9 +72,9 @@ const SpecificationTab = () => {
   const active = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <div className="container flex flex-col items-center justify-center mt-8 px-4">
+    <div className="container flex flex-col items-start justify-center mt-8 px-4">
       {/* Tab container */}
-      <div className="flex border-b mb-4">
+      <div className="flex border-b mb-4 w-full">
         {tabs.map((tab) => (
           <div
             key={tab.id}
@@ -86,7 +86,7 @@ const SpecificationTab = () => {
             {tab.title}
             <span
               className={`absolute left-0 -bottom-0.5 h-1 bg-black transition-all duration-300 transform scale-x-0 group-hover:scale-x-100 ${
-                activeTab === tab.id ? "scale-x-100" : ""
+                activeTab === tab.id ? "md:scale-x-100" : ""
               } origin-left w-full`}
             />
           </div>
@@ -94,7 +94,7 @@ const SpecificationTab = () => {
       </div>
 
       {/* Tab content */}
-      <div className="text-start max-w-2xl text-start text-gray-700 text-lg transition-opacity duration-300 leading-[146%] w-full mt-4">
+      <div className="text-start max-w-2xl text-gray-700 text-lg transition-opacity duration-300 leading-[146%] w-full items-start mt-4">
         {active.component || active.content}
       </div>
     </div>
