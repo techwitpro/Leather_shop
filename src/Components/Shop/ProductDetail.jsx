@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { items } from "./ShopTabWithSearch";
+import { items } from "../../../data";
 import { secure, plane } from "../../assets";
 import { useCart } from "../context/CartContext";
 import SpecificationTab from "./SpecificationTab";
 import SimilarProduct from "./SimillarProduct";
+import { motion } from "framer-motion";
+
 
 const ProductDetail = () => {
   const { addToCart } = useCart();
@@ -34,7 +36,7 @@ const ProductDetail = () => {
     <>
       <div className="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-14 xl:gap-16">
         {/* Left: Image Gallery */}
-        <div className="flex flex-col md:flex-row gap-2 w-full">
+        <div className="flex flex-col-reverse md:flex-row gap-2 w-full">
           {/* Thumbnails */}
           <div className="flex md:flex-col gap-2 w-full md:w-[120px]">
 
@@ -70,11 +72,34 @@ const ProductDetail = () => {
             style={{ backgroundColor: selectedImage?.bg || '#F7F7F7' }}
           >
             {selectedImage && (
-              <img
+              <motion.img
+                key={selectedImage.src}
                 src={selectedImage.src}
                 alt={product.name}
-                className="w-full h-full object-contain transition-transform duration-300 ease-in-out hover:scale-110"
+                className="w-full h-full object-contain"
+                initial={{ opacity: 0, scale: 0.96, x: -20 }}
+                animate={{
+                  opacity: [1, 1], // Fade out effect: from visible (1) to invisible (0)
+                  scale: [1, 1.01, 1],
+                  x: [0, 10, 0],
+                  rotate: [0, 0.2, -0.2, 0],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                whileHover={{
+                  scale: 1.08,
+                  rotate: 0,
+                  x: 4,
+                  transition: { type: "spring", stiffness: 150, damping: 12 }
+                }}
               />
+
+
+
+
             )}
           </div>
 
@@ -167,7 +192,7 @@ const ProductDetail = () => {
       {/* Tabs */}
       <SpecificationTab />
       <SimilarProduct />
-      
+
 
 
     </>

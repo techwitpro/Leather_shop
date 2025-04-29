@@ -69,13 +69,18 @@ const CounterButton = () => {
       </div>
 
       {/* Right Section (Image) */}
-      <div className="w-full lg:w-1/2 h-[400px] md:h-[706px] flex items-center justify-center mb-4">
+      <motion.div
+        className="w-full lg:w-1/2 h-[400px] md:h-[706px] flex items-center justify-center mb-4"
+        initial={{ opacity: 0, scale: 0.95 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+      >
         <img
           src={aboutTwo}
           alt="About Us Impact Image"
           className="object-cover w-full h-full shadow-sm"
         />
-      </div>
+      </motion.div>
 
     </div>
   );

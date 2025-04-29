@@ -1,7 +1,9 @@
 import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const { cartItems, removeFromCart, editCartItem } = useCart();
+  const navigate = useNavigate();
 
   const handleDecrease = (item) => {
     if (item.quantity > 1) {
@@ -15,11 +17,9 @@ const Cart = () => {
     editCartItem(item.id, item.quantity + 1);
   };
 
-  // ✅ Calculate total cart value
   const cartTotal = cartItems.reduce((sum, item) => {
     return sum + Number(item.price) * item.quantity;
   }, 0);
-  
 
   return (
     <div className="container mx-auto p-6">
@@ -75,11 +75,17 @@ const Cart = () => {
             ))}
           </div>
 
-          {/* ✅ Grand Total */}
+          {/* ✅ Grand Total + Proceed to Checkout */}
           <div className="text-right mt-8">
-            <h3 className="text-2xl font-bold text-gray-800">
-              Grand Total: ${cartTotal.toFixed(2)}
+            <h3 className="text-2xl font-bold text-green-700 mb-4">
+              <span className="text-black">Grand Total:</span> ${cartTotal.toFixed(2)}
             </h3>
+            <button
+              onClick={() => navigate("/checkout")}
+              className="bg-white text-black border border-black text-lg font-medium px-6 py-3 rounded-none hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-300 ease-in-out"
+            >
+              Proceed to Checkout
+            </button>
           </div>
         </>
       )}
