@@ -48,9 +48,9 @@ const CounterButton = () => {
         {/* Stats Counters */}
         <div className="flex flex-col md:flex-row justify-start gap-6 lg:gap-12 p-0 mt-0">
           {[
-            { end: 50000, label: "Total Sales", color: "text-black", duration: 2000 },
-            { end: 1000000, label: "Overall Customers", color: "text-black", duration: 2500 },
-            { end: 20, label: "Countries", color: "text-black", duration: 1500 },
+            { end: 50000, label: "Total Sales", color: "text-black", duration: 5000 },
+            { end: 1000000, label: "Overall Customers", color: "text-black", duration: 5000 },
+            { end: 20, label: "Countries", color: "text-black", duration: 5000 },
           ].map((item, index) => (
             <motion.div
               key={index}

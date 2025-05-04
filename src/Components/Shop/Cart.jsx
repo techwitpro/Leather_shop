@@ -32,13 +32,13 @@ const Cart = () => {
             {cartItems.map((item) => (
               <div
                 key={item.id}
-                className="flex flex-col md:flex-row items-center justify-between border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition"
+                className="flex flex-col md:flex-row items-center justify-between border border-gray-200 rounded-none p-4 shadow-sm hover:shadow-md transition"
               >
                 <div className="flex items-center gap-4 w-full md:w-2/3">
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="w-52 h-50 object-cover rounded-lg"
+                    className="w-52 h-50 object-cover rounded-none"
                   />
                   <div>
                     <h3 className="text-xl font-semibold text-gray-800">{item.name}</h3>
@@ -66,7 +66,7 @@ const Cart = () => {
                   </p>
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="text-red-500 mt-2 hover:underline"
+                    className="text-red-500 mt-2 hover:underline text-center"
                   >
                     Remove
                   </button>
