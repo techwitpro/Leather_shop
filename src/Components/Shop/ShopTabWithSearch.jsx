@@ -136,12 +136,14 @@ const ShopTabsWithSearch = () => {
       {/* Show More Button */}
       {visibleCount < filteredItems.length && (
         <div className="flex justify-center mt-8">
-          <button
+          <motion.button
             onClick={() => setVisibleCount((prev) => prev + 3)}
-            className="border border-black px-4 p-2 w-[180px] h-[50px] md:w-[200px] md:h-[60px] transition-colors duration-200 text-base font-medium poppins hover:bg-black hover:text-white bg-white text-black focus:bg-black focus:text-white focus:ring-2 focus:ring-offset-1 focus:ring-black focus:outline-none"
+            className="border border-black px-6 py-2 w-[180px] h-[50px] md:w-[200px] md:h-[60px] transition-colors duration-200 text-base font-medium poppins hover:bg-black hover:text-white bg-white text-black focus:bg-black focus:text-white focus:ring-2 focus:ring-offset-1 focus:ring-black focus:outline-none hover:shadow-sm"
+            whileHover={{ scale: 1.05, transition: { duration: 0.2, ease: 'easeOut' } }}
+            whileTap={{ scale: 0.95, transition: { duration: 0.15, ease: 'easeInOut' } }}
           >
             Show More
-          </button>
+          </motion.button>
         </div>
       )}
     </div>

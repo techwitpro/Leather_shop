@@ -66,7 +66,7 @@ const Cart = () => {
                   </p>
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="text-red-500 mt-0 mb-2 hover:underline text-center hover:scale-105 transition-all duration-300 ease-in-out"
+                    className="bg-white border border-gray-300 px-4 py-2 hover:shadow-sm text-red-500 mt-2 mb-2 rounded-md hover:bg-black hover:text-white transform hover:scale-105 transition-all duration-300 ease-in-out"
                   >
                     Remove
                   </button>

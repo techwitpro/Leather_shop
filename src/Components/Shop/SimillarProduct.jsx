@@ -31,7 +31,13 @@ const SimilarProduct = () => {
               />
               <div className="p-6">
                 <h2 className="card-title text-center text-black">{product.title}</h2>
-                <button className="button-accent">Add to Cart</button>
+                <motion.button
+                  className="button-accent"
+                  whileHover={{ scale: 1.05, transition: { duration: 0.2, ease: 'easeOut' } }}
+                  whileTap={{ scale: 0.95, transition: { duration: 0.15, ease: 'easeInOut' } }}
+                >
+                  Add to Cart
+                </motion.button>
               </div>
             </motion.div>
           ))}

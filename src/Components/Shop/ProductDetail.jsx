@@ -12,7 +12,7 @@ const ProductDetail = () => {
   const { addToCart } = useCart();
   const handleAddToCart = () => {
     addToCart(product, quantity);
-    alert("Product added to cart");
+    // alert("Product added to cart");
     console.log(product)
     setQuantity(1);
   }
@@ -34,7 +34,7 @@ const ProductDetail = () => {
 
   return (
     <>
-      <div className="container mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-14 xl:gap-16">
+      <div className="container mx-auto px-4 py-4 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-14 xl:gap-16">
         {/* Left: Image Gallery */}
         <div className="flex flex-col-reverse md:flex-row gap-2 w-full">
           {/* Thumbnails */}
@@ -46,15 +46,15 @@ const ProductDetail = () => {
                 onClick={() => setSelectedImage(imgObj)}
                 onMouseEnter={() => setHoveredBg(imgObj.bg)}
                 onMouseLeave={() => setHoveredBg(null)}
-                className={`w-full aspect-[4/5] flex items-center justify-center overflow-hidden rounded-none border-2 cursor-pointer transition-all duration-200 
-    ${selectedImage?.src === imgObj.src ? 'border-gray-100' : 'border-gray-200'}`}
+                className={`w-full md:h-full aspect-[4/5] flex items-center justify-center overflow-hidden rounded-none border border-1  shadow cursor-pointer transition-all duration-200 
+    ${selectedImage?.src === imgObj.src ? 'border-gray-300' : 'border-gray-500'}`}
                 style={{
                   backgroundColor:
                     selectedImage?.src === imgObj.src
                       ? imgObj.bg
                       : hoveredBg === imgObj.bg
                         ? imgObj.bg
-                        : '#f3f4f6', // fallback for gray-100
+                        : '#ffffff', 
                 }}
               >
                 <img
@@ -68,8 +68,8 @@ const ProductDetail = () => {
 
           {/* Main Image */}
           <div
-            className="p-4 flex items-center justify-center w-full aspect-square overflow-hidden border border-gray-100"
-            style={{ backgroundColor: selectedImage?.bg || '#F7F7F7' }}
+            className="p-4 flex items-center justify-center w-full aspect-square overflow-hidden border border-1 border-gray-300 shadow"
+            style={{ backgroundColor: selectedImage?.bg || '#00454c' }}
           >
             {selectedImage && (
               <motion.img
@@ -166,7 +166,7 @@ const ProductDetail = () => {
             </button>
             {/* Add to Cart */}
             <button
-              className=" bg-black text-white py-3 px-6 text-lg font-semibold hover:bg-gray-800 transition justify-center flex items-center gap-2 w-60 h-10"
+              className="bg-black text-white border border-gray-600 text-base font-medium px-6 py-2 rounded-md transform hover:shadow-sm hover:scale-105 transition-all duration-300 ease-in-out"
               onClick={handleAddToCart}
             >
               Add to Cart

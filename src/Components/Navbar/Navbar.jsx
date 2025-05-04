@@ -58,7 +58,7 @@ const Navbar = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <nav className="relative container px-4">
+    <nav className="relative container px-4 nav">
       <div className="flex items-center justify-between">
         {/* Left Side */}
         <div className="flex items-center space-x-6">
