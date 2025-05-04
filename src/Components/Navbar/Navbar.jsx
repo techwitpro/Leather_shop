@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { logo, search, bag, user } from '../../assets';
 import { Link, useLocation } from 'react-router-dom';
+import { useCart } from '../context/CartContext';
+
+
+
 
 const HamburgerIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
@@ -15,6 +19,8 @@ const CloseIcon = () => (
 );
 
 const Navbar = () => {
+  const { cartCount } = useCart();
+
   const location = useLocation();
   const activeLink = location.pathname;
 
@@ -80,9 +86,15 @@ const Navbar = () => {
             <Link to="/search" aria-label="Search" className="text-gray-700 hover:text-black">
               <img src={search} alt="search" className="h-6 w-6" />
             </Link>
-            <Link to="/cart" aria-label="Shopping Bag" className="text-gray-700 hover:text-black">
+            <Link to="/cart" aria-label="Shopping Bag" className="relative text-gray-700 hover:text-black">
               <img src={bag} alt="shopping bag" className="h-6 w-6" />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
             </Link>
+
             <Link to="/login" aria-label="User Account" className="text-gray-700 hover:text-black">
               <img src={user} alt="user" className="h-6 w-6" />
             </Link>
@@ -136,9 +148,15 @@ const Navbar = () => {
               <Link to="/search" onClick={handleMobileLinkClick}>
                 <img src={search} alt="search" className="h-6 w-6" />
               </Link>
-              <Link to="/cart" onClick={handleMobileLinkClick}>
+              <Link to="/cart" onClick={handleMobileLinkClick} className="relative">
                 <img src={bag} alt="shopping bag" className="h-6 w-6" />
+                {cartCount > 0 && (
+                  <span className="absolute -top-2 -right-2 bg-red-600 text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                    {cartCount}
+                  </span>
+                )}
               </Link>
+
               <Link to="/login" onClick={handleMobileLinkClick}>
                 <img src={user} alt="user" className="h-6 w-6" />
               </Link>

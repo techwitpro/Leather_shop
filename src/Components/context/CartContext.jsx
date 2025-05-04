@@ -6,13 +6,11 @@ export const useCart = () => useContext(CartContext);
 
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
-    // 🔁 Load from localStorage on initial render
     const stored = localStorage.getItem('cart');
     return stored ? JSON.parse(stored) : [];
   });
 
   useEffect(() => {
-    // 💾 Save to localStorage whenever cartItems changes
     localStorage.setItem('cart', JSON.stringify(cartItems));
   }, [cartItems]);
 
@@ -43,9 +41,13 @@ export const CartProvider = ({ children }) => {
     );
   };
 
+  // ✅ Add total quantity
+  const cartCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, editCartItem }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, editCartItem, cartCount, useCart }}>
       {children}
     </CartContext.Provider>
   );
 };
+

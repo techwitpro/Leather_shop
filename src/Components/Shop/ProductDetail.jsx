@@ -142,7 +142,7 @@ const ProductDetail = () => {
 
             <div className="flex gap-4 items-center">
               <p>Size:</p>
-              <p className=" text-sm text-center gap-4">38 40 42 44 46</p>
+              <p className=" text-sm text-center ">38 40 42 44 46</p>
 
             </div>
 

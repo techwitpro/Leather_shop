@@ -64,3 +64,9 @@
 .archivo {
   font-family: 'Archivo', sans-serif;
 }
+
+.cart-container {
+  min-height: 100vh; /* Ensures the container takes at least full viewport height */
+  display: flex;
+  flex-direction: column;
+}

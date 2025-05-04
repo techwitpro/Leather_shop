@@ -15,9 +15,11 @@ const ShopTabsWithSearch = () => {
   const filteredItems = items.filter((item) => {
     const matchCategory =
       activeCategory === "All Items" || item.category === activeCategory;
-    const matchSearch = item.name
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+      const trimmedSearch = searchTerm.trim().toLowerCase();
+      const matchSearch =
+      item.name.toLowerCase().includes(trimmedSearch) ||
+      item.category.toLowerCase().includes(trimmedSearch);
+
     return matchCategory && matchSearch;
   });
 
@@ -56,8 +58,9 @@ const ShopTabsWithSearch = () => {
                 setSearchTerm(e.target.value);
                 setVisibleCount(6);
               }}
-              className="w-full px-4 py-2 pr-10 border border-black rounded-none text-black placeholder-black focus:ring-1 focus:ring-black focus:outline-none md:w-full md:h-[45px] text-base archivo"
+              className="w-full px-4 py-2 pr-10 border border-black rounded-none text-black placeholder-gray-500 focus:ring-1 focus:ring-black focus:outline-none md:w-full md:h-[45px] text-base archivo"
             />
+
             <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black w-5 h-5 pointer-events-none mr-2" />
           </div>
         </div>

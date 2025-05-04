@@ -28,7 +28,7 @@ const Checkout = () => {
 
   if (orderPlaced) {
     return (
-      <div className="container mx-auto p-6 text-center">
+      <div className="container mx-auto p-6 text-center cart-container justify-center bg-gray-100">
         <h2 className="text-3xl font-bold mb-4 text-green-600">🎉 Thank you for your order!</h2>
         <p className="text-gray-600">We'll process your order shortly.</p>
       </div>
@@ -36,9 +36,9 @@ const Checkout = () => {
   }
 
   return (
-    <div className="container mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-6 text-center">🧾 Billing Information</h2>
-      <div className="max-w-lg mx-auto">
+    <div className="container mx-auto p-6 bg-gray-100 justify-center items-center">
+      <h2 className="text-3xl font-bold mb-6 text-center mt-20">🧾 Billing Information</h2>
+      <div className="max-w-lg mx-auto cart-container">
         <div className="grid grid-cols-1 gap-6">
           <input
             type="text"
