@@ -1,14 +1,23 @@
+// Login.jsx
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase"; 
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log("Login with:", { email, password });
-    // ➔ here you connect to API or auth later
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/"); // Or your authenticated route
+    } catch (err) {
+      setError(err.message);
+    }
   };
 
   return (
@@ -38,6 +47,7 @@ const Login = () => {
           >
             Login
           </button>
+          {error && <p className="text-red-500 text-center">{error}</p>}
         </form>
 
         <p className="text-center text-gray-600 mt-4">

@@ -175,12 +175,12 @@ const ProductDetail = () => {
 
           <div className="flex gap-6 items-center mt-4">
             <div className="flex gap-4">
-              <img src={plane} alt="Plane Icon" className="bg-black w-[60px] h-[59px]" />
+              <img src={plane} alt="Plane Icon" className="bg-black w-[60px] h-[59px] p-2" />
               <p className="text-black text-start text-base">World wide<br />
                 Free Shipping</p>
             </div>
             <div className="flex gap-4">
-              <img src={secure} alt="secure" className="bg-black w-[60px] h-[59px]" />
+              <img src={secure} alt="secure" className="bg-black w-[60px] h-[59px] p-2" />
               <p className="text-black text-start text-base">100% Safe & <br />
                 Secure Checkout</p>
             </div>

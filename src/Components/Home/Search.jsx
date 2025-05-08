@@ -7,13 +7,14 @@ const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredProducts = items.filter(product =>
+    product.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <div className="container mx-auto px-6 py-3">
+    <div className="container mx-auto px-6 py-3 bg-gray-100 mt-8">
       {/* Search Input */}
-      <div className="mb-8 max-w-lg mx-auto relative">
+      <div className="mb-8 max-w-lg mx-auto relative mt-8">
         {/* Input with Search Icon */}
         <input
           type="text"
@@ -24,10 +25,11 @@ const Search = () => {
         />
 
         {/* Search Icon */}
-        <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400">
+        <div className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-500 text-xl pointer-events-none">
           <FiSearch />
         </div>
       </div>
+
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -36,7 +38,7 @@ const Search = () => {
             <Link
               to={`/product/${product.id}`}
               key={product.id}
-              className="bg-white border border-gray-200 rounded-none shadow-sm hover:shadow-md transition duration-300 ease-in-out transform hover:scale-105 flex flex-col"
+              className="bg-white border border-gray-200 rounded-none hover:shadow-sm transition duration-300 ease-in-out transform hover:scale-105 flex flex-col"
             >
               <div className="p-6 flex flex-col flex-grow">
                 <img

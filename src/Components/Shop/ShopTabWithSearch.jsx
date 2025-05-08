@@ -61,7 +61,7 @@ const ShopTabsWithSearch = () => {
               className="w-full px-4 py-2 pr-10 border border-black rounded-none text-black placeholder-gray-500 focus:ring-1 focus:ring-black focus:outline-none md:w-full md:h-[45px] text-base archivo"
             />
 
-            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-black w-5 h-5 pointer-events-none mr-2" />
+            <Search className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 w-5 h-5 pointer-events-none mr-2" />
           </div>
         </div>
       </div>

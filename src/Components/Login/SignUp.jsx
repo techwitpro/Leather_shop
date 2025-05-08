@@ -1,15 +1,48 @@
+// Signup.jsx
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
+import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { auth } from "../../firebase";
+import { toast } from "react-toastify";
 
 const Signup = () => {
+  const { signup } = useAuth();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("")
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    console.log("Signup with:", { name, email, password });
-    // ➔ here you send to signup API or auth later
+    try {
+      await signup(email, password, name);
+      toast.success("Account created successfully!");
+      navigate("/home");
+    } catch (err) {
+      setError(err.message);
+      toast.error(err.message);
+    }
+  };
+
+
+  const handleGoogleSignIn = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      setLoading(true); // disable button
+      await signInWithPopup(auth, provider);
+      toast.success("Logged in with Google!");
+      navigate("/home");
+    } catch (err) {
+      console.error(err);
+      if (err.code !== 'auth/cancelled-popup-request') {
+        toast.error("Google sign-in failed");
+      }
+    } finally {
+      setLoading(false); // re-enable button
+    }
   };
 
   return (
@@ -47,7 +80,16 @@ const Signup = () => {
           >
             Sign Up
           </button>
+          {error && <p className="text-red-500 text-center">{error}</p>}
         </form>
+
+        <button
+          onClick={handleGoogleSignIn}
+          className="mt-4 w-full bg-red-500 text-white py-3 rounded-none hover:bg-red-600 transition-all duration-300 disabled:opacity-50"
+          disabled={loading}
+        >
+          {loading ? "Loading..." : "Sign Up with Google"}
+        </button>
 
         <p className="text-center text-gray-600 mt-4">
           Already have an account?{" "}

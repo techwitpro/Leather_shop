@@ -33,6 +33,7 @@ import aboutTwo from './aboutTwo.png';
 import aboutBag from './aboutBag.jpg'
 import aboutMoneybag from './aboutMoneybag.jpg'
 import bagShop from './bagShop.png';
+import onlineavatar from './onlineavatar.png';
 
 export {
   bag,
@@ -69,5 +70,6 @@ export {
   aboutTwo,
   aboutBag,
   aboutMoneybag,
-  bagShop
+  bagShop,
+  onlineavatar,
 };
